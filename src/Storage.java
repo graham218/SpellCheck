@@ -7,17 +7,6 @@ public interface Storage
     public void insert(String str);
 	public boolean find(String str);
 	public String toString();
-	default void insertSorted(ArrayList<String> dictionary, int low, int high)
-    {
-        if (low > high)
-        {
-            return;
-        }
-        int mid = (low+high)/2;
-        insert(dictionary.get(mid)); //insert the current string in the dictionary;
-        insertSorted(dictionary, mid+1, high); //insert the right side of the dictionary
-        insertSorted(dictionary, low, mid-1); //insert the left side of the dictionary
-    }
     default ArrayList<String> suggest(String str)
     {
 		//arraylist of all possible suggestions
