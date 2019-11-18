@@ -6,9 +6,9 @@ public class Trie implements Storage
 { 
 	private TrieNode root;
 	public int size;
-
-    public Trie() //constructor
-    {
+	
+	public Trie() //constructor
+    	{
 		root = new TrieNode();
 		size = 0;
 	}
@@ -19,14 +19,14 @@ public class Trie implements Storage
 		for (int level = 0; level < str.length(); level++) 
 		{
 			int currentChar = str.charAt(level);
-            if (node.letters[currentChar] == null)
-            {
+            		if (node.letters[currentChar] == null)
+            		{
 				node.letters[currentChar] = new TrieNode(); //place node there
 			}
 			node = node.letters[currentChar]; //traverse the tree letter by letter
 		} 
-        node.end = true;
-        ++size;
+        	node.end = true;
+        	++size;
 	} 
 
 	public boolean find(String str) //searches through tree to find the string
@@ -35,10 +35,10 @@ public class Trie implements Storage
 		for (int level = 0; level < str.length(); level++)
 		{ 
 			int index = str.charAt(level); //travel down letter by letter
-            if (node.letters[index] == null) //if you reached the end of the tree and did not find it return false
-            {
-                return false; 
-            }
+           		 if (node.letters[index] == null) //if you reached the end of the tree and did not find it return false
+			 {
+                		return false; 
+			}
 			node = node.letters[index]; //sets the node so it travels down the tree
 		}
 		return node.end; //if you found the end of the word return true;
