@@ -65,7 +65,7 @@ public interface Storage
 		{
 			temp = str.substring(0,i) + str.substring(i+1); //skip the letter
 			if(find(temp) && !suggestions.contains(temp)) //if word exists and is not in the suggestions add it
-            {
+			{
 				suggestions.add(temp);
 			}
 		}
@@ -97,10 +97,10 @@ public interface Storage
 	default char[] swap(int i, int j, String str) // helper function
 	{
 		char ch[] = str.toCharArray(); 
-        char temp = ch[i]; 
-        ch[i] = ch[j]; 
-        ch[j] = temp; 
-        return ch;
+		char temp = ch[i]; 
+		ch[i] = ch[j]; 
+		ch[j] = temp; 
+		return ch;
 	}
 
 }
