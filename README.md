@@ -12,5 +12,6 @@ Spellchecker using Trie tree and Binary search tree. Imports a text file called 
 Runtime Analysis:
 The runtime of BST insert and find is O(N), where N is the height of the tree since the dictionary is sorted.
 The runtime of Trie insert and find is O(N), where N is the length of the word.
-Since both trees use the same suggestion runtime (which is O(N^2 + (N*M)), N being string length and M being the total number of ascii letters), so that does not factor into runtime.
-The runtime of Trie is significatnly faster as BST needs to travel down the whole tree, therefore Trie tree is the faster tree for spellchecking.
+Since both trees use the same suggestion runtime (which is O(N^2 + (N*M)), N being string length and M being the total number of ascii letters), so that does not factor into different runtimes between the two data structures.
+The runtime of Trie is significatnly faster because BST needs to travel down the whole tree rather than a word's length.
+Therefore Trie tree is the data structure for spellchecking.
