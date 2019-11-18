@@ -79,7 +79,7 @@ public class BST implements Storage
                 }
 			}
         }
-        return false
+        return false;
 	}
 
 
