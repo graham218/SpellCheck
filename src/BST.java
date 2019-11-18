@@ -16,40 +16,40 @@ public class BST implements Storage
         Node newNode = new Node(str);
         if(root == null) //it start of tree insert the node
         {
-			root = newNode;
-		}
+		root = newNode;
+	}
         else //if not then loop to go deeper
         {
             Node current = root;
             boolean running = true;
-			while(running) //loops to add to right place
+	    while(running) //loops to add to right place
+	    {
+	    	if(current.data.compareTo(newNode.data) > 0) //test left side
+		{
+			if(current.left == null)
 			{
-				if(current.data.compareTo(newNode.data) > 0) //test left side
-				{
-                    if(current.left == null)
-                    {
-						current.left = newNode;
-						break;
-					}
-                    else
-                    {
-						current = current.left;
-                    }
-				}
-                else //if not on left then right
-                {
-                    if(current.right == null)
-                    {
-						current.right = newNode;
-						break;
-					}
-                    else
-                    {
-						current = current.right;
-                    }
-				}
+				current.left = newNode;
+				break;
+			}
+			else
+			{
+				current = current.left;
 			}
 		}
+                else //if not on left then right
+                {
+			if(current.right == null)
+			{
+				current.right = newNode;
+				break;
+			}
+			else
+			{
+				current = current.right;
+			}
+		}
+	    }
+	}
     }
     
     public boolean find(String str)//return boolean for finding strings
