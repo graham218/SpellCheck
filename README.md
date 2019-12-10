@@ -24,7 +24,7 @@ Therefore Trie tree is the data structure for spellchecking.
 
 
 # TODO
-- Implement a BETTER SPELL CHECK using Levenshtein distance! \
-- Implement a hashtable to store most used words \
-- Start autocorrecting words in terminal as they go. Live Suggestions \
+- Implement a BETTER SPELL CHECK using Levenshtein distance! 
+- Implement a hashtable to store most used words 
+- Start autocorrecting words in terminal as they go. Live Suggestions 
 - Reading the dictionary directly off github 
